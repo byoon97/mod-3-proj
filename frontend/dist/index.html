@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>WWC</title>
+  </head>
+  <body>
+    <nav class="flex items-center bg-gray-800 p-3 flex-wrap">
+      <a href="#" class="p-2 mr-4 inline-flex items-center">
+        <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="fill-current text-white h-8 w-8 mr-2"
+        >
+          <path
+            d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"
+          />
+        </svg>
+        <span class="text-xl text-white font-bold uppercase tracking-wide"
+          >WorldWide MarketPlace</span
+        >
+      </a>
+      <button
+        class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
+        data-target="#navigation"
+      >
+        <i class="material-icons">menu</i>
+      </button>
+      <div
+        class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
+        id="navigation"
+      >
+        <div
+          class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
+        >
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>Home</span>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>About</span>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>Services</span>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>Contact Us</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- component -->
+    <body class="antialiased font-sans bg-gray-200">
+      <div class="my-4 mt-6 -mx-2 lg:flex">
+        <div class="lg:px-2 lg:w-2/5">
+          <div
+            class="mx-4 card bg-white max-w-md p-10 md:rounded-lg my-8 mx-auto"
+          >
+            <div>
+              <h2 class="text-2xl font-semibold leading-tight">Sell an Item</h2>
+            </div>
+            <form class="form mt-4" id="item-form">
+              <div class="flex flex-col text-sm">
+                <label for="title" class="font-bold mb-2"
+                  >Name of your Item</label
+                >
+                <input
+                  class="appearance-none border border-gray-200 p-2 focus:outline-none focus:border-gray-500"
+                  type="text"
+                  placeholder="Enter a title"
+                  name="name"
+                />
+              </div>
+              <div class="flex flex-col text-sm">
+                <label for="title" class="font-bold mt-4 mb-2">Price</label>
+                <input
+                  class="appearance-none border border-gray-200 p-2 focus:outline-none focus:border-gray-500"
+                  type="text"
+                  placeholder="Enter a title"
+                  name="price"
+                />
+              </div>
+
+              <div class="text-sm flex flex-col">
+                <label for="description" class="font-bold mt-4 mb-2"
+                  >Description</label
+                >
+                <textarea
+                  class="appearance-none w-full border border-gray-200 p-2 h-40 focus:outline-none focus:border-gray-500"
+                  placeholder="Enter your description"
+                  name="description"
+                ></textarea>
+              </div>
+
+              <div class="flex flex-col text-sm">
+                <label for="title" class="font-bold mt-4 mb-2"
+                  >Image Link</label
+                >
+                <input
+                  class="appearance-none border border-gray-200 p-2 focus:outline-none focus:border-gray-500"
+                  type="text"
+                  placeholder="Enter a title"
+                  name="img_url"
+                />
+              </div>
+              <div class="w-20 h-10">
+                <div class="font-bold mt-4 mb-2">
+                  <label for="description" class="font-bold mt-4 mb-2"
+                    >Quantity
+                    <input
+                      type="number"
+                      value="2"
+                      name="quantity"
+                      class="w-full font-semibold text-center text-gray-700 bg-gray-200 outline-none focus:outline-none hover:text-black focus:text-black"
+                  /></label>
+                </div>
+              </div>
+              <div class="submit">
+                <button
+                  type="submit"
+                  class="w-full bg-blue-600 shadow-lg text-white px-4 py-2 hover:bg-blue-700 mt-8 text-center font-semibold focus:outline-none"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <body class="antialiased text-gray-900 bg-blue-600"></body>
+        <div class="py-8">
+          <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+            <div class="lg:px-2">
+              <div
+                class="inline-block min-w-full shadow rounded-lg overflow-hidden"
+              >
+                <table id="items-table" class="min-w-full leading-normal">
+                  <thead>
+                    <tr>
+                      <th
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                      >
+                        Item Name
+                      </th>
+                      <th
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                      >
+                        Description
+                      </th>
+                      <th
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                      >
+                        Price
+                      </th>
+                      <th
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                      >
+                        Quantity
+                      </th>
+                      <th
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                      ></th>
+                    </tr>
+                  </thead>
+                  <tbody class="append-items"></tbody>
+                </table>
+                <div
+                  class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between"
+                >
+                  <span class="text-xs xs:text-sm text-gray-900">
+                    Showing 1 to 4 of 50 Entries
+                  </span>
+                  <div class="inline-flex mt-2 xs:mt-0">
+                    <button
+                      class="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-l"
+                    >
+                      Prev
+                    </button>
+                    <button
+                      class="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-r"
+                    >
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+    <main>
+      <div class="my-4 mt-6 -mx-2 lg:flex">
+        <div class="lg:px-2 lg:w-1/2">
+          <div
+            class="md:flex shadow-lg mx-6 md:mx-auto my-5 max-w-lg md:max-w-2xl h-30"
+          >
+            <img
+              class="h-full w-full md:w-1/3 object-cover rounded-lg rounded-r-none pb-5/6"
+              src="https://ik.imagekit.io/q5edmtudmz/FB_IMG_15658659197157667_wOd8n5yFyXI.jpg"
+              alt="bag"
+            />
+            <div class="w-full md:w-2/3 px-4 py-4 bg-white rounded-lg">
+              <div class="flex items-center">
+                <h2 class="text-xl text-gray-800 font-medium mr-auto">
+                  Brian Seacreek
+                </h2>
+              </div>
+              <p class="text-sm text-gray-700 mt-4">
+                Rating : 4.5/5
+              </p>
+              <p class="text-sm text-gray-700 mt-4">
+                Location : 13-56 Woodcreek Road, CT
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:px-2 lg:w-1/2" id="data-element">
+          <div
+            class="md:flex shadow-lg mx-6 md:mx-auto my-5 max-w-lg md:max-w-2xl h-30"
+          >
+            <img
+              class="h-full w-full md:w-1/3 object-cover rounded-lg rounded-r-none pb-5/6"
+              src="https://ik.imagekit.io/q5edmtudmz/FB_IMG_15658659197157667_wOd8n5yFyXI.jpg"
+              alt="bag"
+              name="image"
+            />
+            <div class="w-full md:w-2/3 px-4 py-4 bg-white rounded-lg">
+              <div class="flex items-center">
+                <h2
+                  class="text-xl text-gray-800 font-medium mr-auto"
+                  name="name"
+                >
+                  Your Travel Buddy
+                </h2>
+                <p
+                  class="text-gray-800 font-semibold tracking-tighter"
+                  name="price"
+                >
+                  48$
+                </p>
+              </div>
+              <p class="text-sm text-gray-700 mt-4" name="description"></p>
+              <div class="flex items-center justify-end mt-4 top-auto">
+                <button
+                  id="add-to-cart"
+                  class="bg-blue-600 text-gray-200 px-2 py-2 rounded-md"
+                  name="add-to-cart"
+                >
+                  Add to Your Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="pb-6 mt-6" />
+      <div class="flex justify-center my-6"></div>
+      <div
+        class="flex flex-col w-full p-8 text-gray-800 bg-white md:rounded-lg shadow-lg pin-r pin-y md:w-4/5 lg:w-4/5"
+      >
+        <div class="flex-1">
+          <table class="w-full text-sm lg:text-base" cellspacing="0">
+            <thead>
+              <tr class="h-12 uppercase">
+                <th class="hidden md:table-cell"></th>
+                <th class="text-left">Item Name</th>
+                <th class="lg:text-right text-left pl-5 lg:pl-0">
+                  <span class="lg:hidden" title="Quantity">Qtd</span>
+                  <span class="hidden lg:inline">Quantity</span>
+                </th>
+                <th class="hidden text-right md:table-cell">Description</th>
+                <th class="text-right">Unit price</th>
+              </tr>
+            </thead>
+            <tbody id="cart-body"></tbody>
+          </table>
+          <a href="#">
+            <button
+              id = "checkout-btn"
+              class="flex justify-center w-full px-10 py-3 mt-6 font-medium text-white uppercase bg-gray-800 rounded-full shadow item-center hover:bg-gray-700 focus:shadow-outline focus:outline-none"
+            >
+              <svg
+                aria-hidden="true"
+                data-prefix="far"
+                data-icon="credit-card"
+                class="w-8"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48.1 48h479.8c26.6 0 48.1-21.5 48.1-48V80c0-26.5-21.5-48-48.1-48zM54.1 80h467.8c3.3 0 6 2.7 6 6v42H48.1V86c0-3.3 2.7-6 6-6zm467.8 352H54.1c-3.3 0-6-2.7-6-6V256h479.8v170c0 3.3-2.7 6-6 6zM192 332v40c0 6.6-5.4 12-12 12h-72c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12zm192 0v40c0 6.6-5.4 12-12 12H236c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12z"
+                />
+              </svg>
+              <span class="ml-2 mt-5px">Procceed to checkout</span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <script src="/Users/brandonyoon/Desktop/mod-3-proj/frontend/src/index.js"></script>
+  </body>
+</html>
